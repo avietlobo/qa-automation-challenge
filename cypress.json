@@ -1,0 +1,5 @@
+{
+    "baseUrl": "https://admin-advertisement.herokuapp.com",
+    "testFiles": "features/*.feature"
+
+}

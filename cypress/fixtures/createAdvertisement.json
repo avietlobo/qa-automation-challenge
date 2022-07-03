@@ -1,0 +1,13 @@
+{   
+    "data": {
+    "name": "Newspaper advertising",
+    "street": "Marule Sea Road",
+    "rooms": 2,
+    "price": "2000",
+    "status": true
+    },
+    "other": {
+        "price": "2.000,00 €",
+        "status": "Active"
+    }
+}

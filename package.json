@@ -1,0 +1,26 @@
+{
+  "name": "qa-automation-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "step_definitions": "./cypress/support/stepDefinitions/",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "author": "Aviet",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.6.1",
+    "cucumber-html-reporter": "^5.5.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  }
+}

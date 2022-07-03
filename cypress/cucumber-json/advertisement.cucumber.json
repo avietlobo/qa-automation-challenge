@@ -1,0 +1,93 @@
+[
+  {
+    "description": "    As a user,\n    I want to create new advertisemnt or edit existing,\n    so that I can publish it",
+    "keyword": "Feature",
+    "name": "Advertisement",
+    "line": 1,
+    "id": "advertisement",
+    "tags": [],
+    "uri": "advertisement.feature",
+    "elements": [
+      {
+        "id": "advertisement;create-new-advertisement",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Create new advertisement",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I navigate to the advertisements page",
+            "result": {
+              "status": "passed",
+              "duration": 7419000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I create new advertisement",
+            "result": {
+              "status": "passed",
+              "duration": 2558000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I see the advertisement displayed",
+            "result": {
+              "status": "passed",
+              "duration": 3188000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "advertisement;edit-any-existing-advertisement",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Edit any existing advertisement",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "I navigate to the existing advertisement page",
+            "result": {
+              "status": "passed",
+              "duration": 3745000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I edit the existing advertisement",
+            "result": {
+              "status": "passed",
+              "duration": 3088000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I see the edited changes reflected in the advertisement",
+            "result": {
+              "status": "passed",
+              "duration": 373000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
