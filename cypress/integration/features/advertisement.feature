@@ -1,9 +1,5 @@
 Feature: Advertisement
 
-    As a user,
-    I want to create new advertisemnt or edit existing,
-    so that I can publish it
-
 Scenario: Create new advertisement
   Given I navigate to the advertisements page
   When I create new advertisement
