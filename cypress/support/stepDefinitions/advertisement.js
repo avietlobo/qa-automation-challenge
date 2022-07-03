@@ -10,7 +10,7 @@ Given('I navigate to the advertisements page', () => {
 })
 
 Given('I navigate to the existing advertisement page', () => {
-    createAdvertisementViaApiToEdit();
+    createAdvertisementViaApi();
     cy.get("@advertisementId").then(id => {
         cy.visit(URL.ADVERTISEMENT + '/' + id + '/edit')
     })
@@ -25,7 +25,7 @@ When('I edit the existing advertisement', () => {
 })
 
 Then('I see the edited changes reflected in the advertisement', () => {
-    verifyEditingForExistingAdvertisement();
+    verifyEditedAdvertisement();
 })
 
 Then('I see the advertisement displayed', () => {
@@ -33,7 +33,7 @@ Then('I see the advertisement displayed', () => {
 
 })
 
-function createAdvertisementViaApiToEdit() {
+function createAdvertisementViaApi() {
     cy.fixture('createAdvertisement').then((requestPayload) => {
         createNewAdvertisementViaApi(requestPayload).then(response => {
             cy.wrap(response.body._id).as("advertisementId")
@@ -41,7 +41,7 @@ function createAdvertisementViaApiToEdit() {
     })
 }
 
-function verifyEditingForExistingAdvertisement() {
+function verifyEditedAdvertisement() {
     cy.get("@advertisementId").then(id => {
         getAdvertisementDetails(id).then(response => {
             cy.fixture('editAdvertisement').then((advertisement) => {
@@ -132,6 +132,9 @@ function verifyAdvertisementPageHeaders() {
 }
 
 function createNewAdvertisement() {
+    /*Note:- Intercepting Create Advertisement API below so that I can mock and render 
+    only this response on the advertisements page after creation for assertion
+    */
     interceptCreateNewAdvertisementApi();
     cy.fixture('createAdvertisement').then((advertisement) => {
         advertisementPage.addBtn().click()
